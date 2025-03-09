@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang>
+<head>
+    <title>Mental Health Survey</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='rightside.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='leftside.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='btn.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='footer.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #81A263;
+        }
+
+        .container {
+            width: 50%;
+            margin: 40px auto;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #d0f9a9;
+            box-shadow: 0 0 15px #154411;
+            background-color: #f3ffe8;
+        }
+
+        .question {
+            display: none;
+            margin-bottom: 20px;
+        }
+
+        #progress {
+            margin: 20px auto;
+            width: 100%;
+            background: #ddd;
+            height: 1.5px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        #progress-bar {
+            width: 0%;
+            height: 100%;
+            background: #365E32;
+            transition: width 0.5s;
+        }
+
+        #reviewSection, #thankYouMessage {
+            display: none;
+        }
+
+        .choice-option {
+            cursor: pointer;
+            padding: 10px;
+            display: block;
+            transition: background 0.2s ease-in-out;
+            margin: 5px;
+            border-radius: 5px;
+            background-color: #d0f9a9;
+            border: 1px solid #8ee4a0;
+        }
+        
+        .choice-option:hover {
+            background-color: #81A263;
+        }
+
+        .choice-option.selected {
+            background-color: #365E32;
+            border-color: #1db750;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    // Fetch 5 random questions from the backend
+    fetch("/get_questions")  
+        .then(response => response.json())
+        .then(questions => {
+            for(let i = 0; i < questions.length; i++) {
+                var str = "p" + (i + 1);
+                let questionText = document.getElementById(str);
+                questionText.innerHTML = questions[i].question;
+
+                for(let j = 0; j < questions[i].options.length; j++) {
+                    var str2 = (i + 1) + "o" + (j + 1);
+                    let option = document.getElementById(str2);
+                    option.innerHTML = questions[i].options[j];
+                    option.dataset.value = questions[i].options[j];
+
+                    // Add event listener to handle option selection
+                    option.addEventListener("click", function() {
+                        let parent = option.parentElement;
+                        parent.querySelectorAll(".choice-option").forEach(opt => opt.classList.remove("selected"));
+                        option.classList.add("selected");
+                    });
+                }
+            }
+
+            let submitButton = document.getElementById("finalSubmitBtn");
+            submitButton.addEventListener("click", function() {
+                let answers = {};
+                let quizForm = document.getElementById("surveyForm");
+
+                for (let i = 1; i <= 5; i++) {
+                    let selectedOption = document.querySelector(`#q${i} .choice-option.selected`);
+                    if (selectedOption) {
+                        answers[i] = selectedOption.dataset.value;
+                    } else {
+                        answers[i] = "No Answer Selected"; // Handle unanswered questions
+                    }
+                }
+
+                // Send answers to the Flask backend
+                fetch("http://127.0.0.1:8000/submit", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ answers: answers })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    alert("Submission successful! Response: " + JSON.stringify(data));
+                    // Optionally reset form after submission
+                    quizForm.reset();
+                });
+            });
+        });
+});
+
+        </script>
+</head>
+<body>
+
+    <h2 style="color:#244221">Mental Health Survey</h2>
+
+    <div id="progress">
+        <div id="progress-bar"></div>
+    </div>
+
+    <div class="container" id="surveyContainer">
+        <form id="surveyForm">
+            <div class="question" id="q1">
+                <p id="p1"></p>
+                <div class="choice-option" id="1o1"></div>
+                <div class="choice-option" id="1o2"></div>
+                <div class="choice-option" id="1o3"></div>
+                <div class="choice-option" id="1o4"></div>
+            </div>
+
+            <div class="question" id="q2">
+                <p id="p2"></p>
+                <div class="choice-option" id="2o1"></div>
+                <div class="choice-option" id="2o2"></div>
+                <div class="choice-option" id="2o3"></div>
+                <div class="choice-option" id="2o4"></div>
+            </div>
+
+            <div class="question" id="q3">
+                <p id="p3"></p>
+                <div class="choice-option" id="3o1"></div>
+                <div class="choice-option" id="3o2"></div>
+                <div class="choice-option" id="3o3"></div>
+                <div class="choice-option" id="3o4"></div>
+            </div>
+
+            <div class="question" id="q4">
+                <p id="p4"></p>
+                <div class="choice-option" id="4o1"></div>
+                <div class="choice-option" id="4o2"></div>
+                <div class="choice-option" id="4o3"></div>
+                <div class="choice-option" id="4o4"></div>
+            </div>
+
+            <div class="question" id="q5">
+                <p id="p5"></p>
+                <div class="choice-option" id="5o1"></div>
+                <div class="choice-option" id="5o2"></div>
+                <div class="choice-option" id="5o3"></div>
+                <div class="choice-option" id="5o4"></div>
+            </div>
+
+            <button type="button" id="prevBtn" class="btn">Previous</button>
+        </form>
+    </div>
+
+    <div id="reviewSection" class="container">
+        <h3>Review Your Answers</h3>
+        <div id="reviewContent"></div>
+        <button type="submit" id="finalSubmitBtn" class="btn">Submit</button>
+    </div>
+
+    <div id="thankYouMessage" class="container">
+        <h3>Thank you for completing the survey!</h3>
+        <a href="/result">
+            <button>click here to check you results!!</button>
+        </a>
+    </div>
+
+    <div class="right-sidebar">
+        <div class="tips-box">
+            <h3>Did You Know? </h3>
+            <p>Studies show that journaling for just 10 minutes a day can reduce stress and improve emotional well-being</p>
+        </div>
+    
+        <div class="help-links">
+            <h3>Need Help?</h3>
+            <a href="https://www.nimh.nih.gov/health/find-help" target="_blank">Call 1800-6565-8282</a>
+            <a href="">Read Mental Health Tips</a>
+        </div>
+    
+        <div class="testimonials">
+            <h3>What Others Say</h3>
+            <p>"This survey helped me reflect on my emotions."</p>
+            <p>"I realized the importance of self-care!"</p>
+        </div>
+    </div>
+
+    <div class="left-sidebar">
+        <div class="tips-box">
+            <h3>Mindfulness Exercise</h3>
+            <p>Take a deep breath in... <br>Hold for 4 second...<br> Exhale slowly...<br> Repeat 3 times.</p>
+        </div>
+    
+        <div class="help-links">
+            <h3><b>Quote Of the Day</b></h3>
+            <p>"Your present circumstances don't determine where you go; they merely determine where you start." <i>- Nido Qubein</i></p>
+            
+        </div>
+    
+        <div class="testimonials">
+            <h3>Community Stories</h3>
+            <P>"I used to struggle with stress, but journaling helped me regain clarity!"</p>
+        </div>
+    </div>
+
+
+    <footer class="footer">
+        <div class="footer-section">
+            <h4>About Us</h4>
+            <p>Something about us</p>
+        </div>
+        <div class="footer-section">
+            <h4>Contact Us</h4>
+            <p>Ph: +91 9898656502</p>
+	        <p>Email: celesther@gmail.com</p>
+        </div>
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <a href="#">Home</a> | <a href="#">Services</a>
+        </div>
+    </footer>
+    <div class="footerfooter">
+        <p>&copy; Celesther</p>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            let currentQuestion = 1;
+            const totalQuestions = 5;
+            let responses = {};
+
+            $("#q1").fadeIn(500);
+            updateProgress();
+            checkPrevBtn();
+
+            function updateProgress() {
+                $("#progress-bar").css("width", ((currentQuestion) / totalQuestions) * 100 + "%");
+            }
+
+            function checkPrevBtn() {
+                if (currentQuestion > 1) {
+                    $("#prevBtn").show();
+                } else {
+                    $("#prevBtn").hide();
+                }
+            }
+
+            $(".choice-option").click(function() {
+                let parentDiv = $(this).closest(".question");
+                parentDiv.find(".choice-option").removeClass("selected");
+                $(this).addClass("selected");
+
+                let questionText = parentDiv.find("p").text();
+                let answerValue = $(this).data("value");
+                responses[questionText] = answerValue;
+                
+                if (currentQuestion < totalQuestions) {
+                    $("#q" + currentQuestion).fadeOut(300, function() {
+                        currentQuestion++;
+                        $("#q" + currentQuestion).fadeIn(500);
+                        updateProgress();
+                        checkPrevBtn();
+                    });
+                } else {
+                    $("#surveyContainer").hide();
+                    $("#reviewSection").fadeIn(500);
+                    showReview();
+                }
+            });
+
+            $("#prevBtn").click(function() {
+                if (currentQuestion > 1) {
+                    $("#q" + currentQuestion).fadeOut(300, function() {
+                        currentQuestion--;
+                        $("#q" + currentQuestion).fadeIn(500);
+                        updateProgress();
+                        checkPrevBtn();
+                    });
+                }
+            });
+
+            $("#finalSubmitBtn").click(function() {
+                $("#reviewSection").hide();
+                $("#thankYouMessage").fadeIn(500);
+            });
+
+            function showReview() {
+                $("#reviewContent").html("");
+                $.each(responses, function(question, answer) {
+                    $("#reviewContent").append("<p><strong>" + question + "</strong> " + answer + "</p>");
+                });
+                $("#finalSubmitBtn").show();
+            }
+
+        });
+    </script>
+</body>
+</html>

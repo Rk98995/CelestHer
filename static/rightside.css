@@ -1,0 +1,41 @@
+.right-sidebar {
+    width: 220px;
+    position:absolute;
+    right: 10px;
+    height: 60%;
+    top: 80px;
+    background: #f3ffe8;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.right-sidebar div {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-left: 4px solid #365E32;
+    background: #deffe5;
+    border-radius: 5px;
+}
+
+.right-sidebar h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #365E32;
+}
+
+.right-sidebar p {
+    font-size: 14px;
+    color: #393939;
+}
+
+.right-sidebar .help-links a {
+    display: block;
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+    margin-top: 5px;
+}
+.right-sidebar .help-links a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,30 @@
+.left-sidebar {
+    width: 220px;
+    position:absolute;
+    left: 10px;
+    height: 57%;
+    top: 80px;
+    background: #f3ffe8;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.left-sidebar div {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-right: 4px solid #365E32;
+    background: #deffe5;
+    border-radius: 5px;
+}
+
+.left-sidebar h3 {
+    font-size: 16px;
+    margin-bottom: 3px;
+    color: #365E32;
+}
+
+.left-sidebar p {
+    font-size: 12px;
+    color: #393939;
+}

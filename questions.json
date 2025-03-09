@@ -1,0 +1,257 @@
+[
+
+        {
+            "id": 1,
+            "question": "How often do you feel stressed in your daily life?",
+            "options": ["Never", "Sometimes", "Often", "Always"]
+        },
+        {
+            "id": 2,
+            "question": "How well do you cope with unexpected challenges?",
+            "options": ["Very well", "Somewhat well", "Not well", "I struggle a lot"]
+        },
+        {
+            "id": 3,
+            "question": "How often do you experience anxiety or worry?",
+            "options": ["Never", "Occasionally", "Often", "Almost every day"]
+        },
+        {
+            "id": 4,
+            "question": "Do you find it difficult to relax even in your free time?",
+            "options": ["No, I can easily relax", "Sometimes", "Often", "Always"]
+        },
+        {
+            "id": 5,
+            "question": "How would you describe your overall mood in the past month?",
+            "options": ["Mostly happy", "Some ups and downs", "Neutral", "Mostly down"]
+        },
+        {
+            "id": 6,
+            "question": "How often do you feel overwhelmed by work-related responsibilities?",
+            "options": ["Never", "Occasionally", "Often", "Always"]
+        },
+        {
+            "id": 7,
+            "question": "Do you struggle with maintaining work-life balance?",
+            "options": ["No, I manage it well", "Sometimes", "Often", "My work dominates my life"]
+        },
+        {
+            "id": 8,
+            "question": "Do you feel that your workplace supports mental health?",
+            "options": ["Yes, very supportive", "Somewhat supportive", "Not at all", "Unsure"]
+        },
+        {
+            "id": 9,
+            "question": "Do you notice mood swings related to your menstrual cycle?",
+            "options": ["No, I feel stable", "A little bit", "Yes, quite a lot", "It's a major issue"]
+        },
+        {
+            "id": 10,
+            "question": "How often do you experience anxiety or depression before your period?",
+            "options": ["Never", "Sometimes", "Often", "Every cycle"]
+        },
+        {
+            "id": 11,
+            "question": "Have you experienced emotional changes during menopause?",
+            "options": ["No, I feel the same", "Some changes", "I struggle a lot", "Not applicable"]
+        },
+        {
+            "id": 12,
+            "question": "How well do you manage stress related to menopause?",
+            "options": ["Very well", "Sometimes okay", "Struggling", "Not applicable"]
+        },
+        {
+            "id": 13,
+            "question": "Have you ever experienced mood swings or anxiety during pregnancy?",
+            "options": ["No, I felt stable", "A little bit", "Yes, I struggled", "Not applicable"]
+        },
+        {
+            "id": 14,
+            "question": "How well did you feel supported during your pregnancy?",
+            "options": ["Very supported", "Somewhat", "Not at all", "Not applicable"]
+        },
+        {
+            "id": 15,
+            "question": "How would you rate the quality of your sleep?",
+            "options": ["Very good", "Average", "Poor", "Terrible"]
+        },
+        {
+            "id": 16,
+            "question": "Do you have trouble falling asleep due to stress or anxiety?",
+            "options": ["Never", "Sometimes", "Often", "Always"]
+        },
+        {
+            "id": 17,
+            "question": "How comfortable do you feel in your body?",
+            "options": ["Very confident", "Somewhat confident", "Neutral", "Not confident"]
+        },
+        {
+            "id": 18,
+            "question": "Do you feel societal pressure regarding your appearance?",
+            "options": ["No pressure", "A little", "A lot", "Severely affects me"]
+        },
+        {
+            "id": 19,
+            "question": "Do you feel emotionally fulfilled in your relationships?",
+            "options": ["Yes, very much", "Somewhat", "Neutral", "Not really"]
+        },
+
+        {
+            "id": 20,
+            "question": "How often do you experience conflicts that impact your mental health?",
+            "options": ["Never", "Occasionally", "Often", "Almost always"]
+        },
+    
+        {
+        "id": 21,
+        "question": "How do you typically manage stress?",
+        "options": ["Exercise/Meditation", "Listening to music", "Reading or hobbies", "I struggle to manage it"]
+        },
+
+    {
+        "id": 22,
+        "question": "How often do you engage in self-care activities?",
+        "options": ["Regularly", "Sometimes", "Rarely", "Never"]
+    },
+    {
+        "id": 23,
+        "question": "Do you feel guilty when prioritizing your own well-being?",
+        "options": ["No, I value self-care", "Sometimes", "Yes, always", "I'm unsure"]
+    },
+    {
+        "id": 24,
+        "question": "Do you turn to social media when feeling stressed?",
+        "options": ["No, I disconnect", "Occasionally", "Often", "All the time"]
+    },
+    {
+        "id": 25,
+        "question": "How often do you take breaks during work or daily tasks?",
+        "options": ["Frequently", "Occasionally", "Rarely", "Almost never"]
+    },
+    {
+        "id": 26,
+        "question": "How often do you experience intrusive negative thoughts?",
+        "options": ["Never", "Sometimes", "Often", "Always"]
+    },
+    {
+        "id": 27,
+        "question": "Have you ever been diagnosed with anxiety or depression?",
+        "options": ["Yes", "No", "Not formally but I suspect it", "Prefer not to say"]
+    },
+    {
+        "id": 28,
+        "question": "Do you feel your emotions are often unpredictable?",
+        "options": ["No, I feel stable", "Occasionally", "Often", "Always"]
+    },
+    {
+        "id": 29,
+        "question": "How comfortable are you seeking professional help for mental health?",
+        "options": ["Very comfortable", "Somewhat comfortable", "Unsure", "Not comfortable at all"]
+    },
+    {
+        "id": 30,
+        "question": "Have you ever attended therapy or counseling?",
+        "options": ["Yes, and it was helpful", "Yes, but it didn't help", "No, but I'm open to it", "No, and I'm not interested"]
+    },
+    {
+        "id": 31,
+        "question": "Have you ever noticed mood changes related to hormonal shifts?",
+        "options": ["No", "Sometimes", "Yes, frequently", "It severely affects me"]
+    },
+    {
+        "id": 32,
+        "question": "If you've been on hormonal birth control, did it affect your mental health?",
+        "options": ["Yes, it helped stabilize my mood", "No noticeable change", "Yes, it worsened my mood", "I've never used hormonal birth control"]
+    },
+    {
+        "id": 33,
+        "question": "Do you feel informed about how hormonal changes impact your mental health?",
+        "options": ["Yes, very well", "Somewhat", "Not really", "Not at all"]
+    },
+    {
+        "id": 34,
+        "question": "How often do you exercise or engage in physical activity?",
+        "options": ["Daily", "A few times a week", "Rarely", "Never"]
+    },
+    {
+        "id": 35,
+        "question": "Do you feel your diet affects your mental health?",
+        "options": ["Yes, healthy eating improves my mood", "Somewhat", "No noticeable effect", "I don't pay attention to my diet"]
+    },
+    {
+        "id": 36,
+        "question": "How often do you experience fatigue or low energy levels?",
+        "options": ["Almost never", "Occasionally", "Often", "Constantly"]
+    },
+    {
+        "id": 37,
+        "question": "Do you experience physical symptoms like headaches or stomach issues when stressed?",
+        "options": ["Yes, frequently", "Sometimes", "No", "Not sure"]
+    },
+    {
+        "id": 38,
+        "question": "How often do you get medical checkups for overall health?",
+        "options": ["Regularly", "Occasionally", "Rarely", "Never"]
+    },
+    {
+        "id": 39,
+        "question": "Do you feel you have a strong support system?",
+        "options": ["Yes, I have close friends/family", "Somewhat", "No, I feel isolated", "I'm unsure"]
+    },
+    {
+        "id": 40,
+        "question": "How often do you reach out to someone when feeling down?",
+        "options": ["Often", "Sometimes", "Rarely", "Never"]
+    },
+    {
+        "id": 41,
+        "question": "Do you feel pressure to meet societal expectations (career, marriage, family, etc.)?",
+        "options": ["Yes, a lot", "Somewhat", "Not at all", "I try not to think about it"]
+    },
+    {
+        "id": 42,
+        "question": "Have you experienced emotional abuse in any relationship?",
+        "options": ["Yes", "No", "Not sure", "Prefer not to say"]
+    },
+    {
+        "id": 43,
+        "question": "Do you feel safe expressing your opinions and emotions?",
+        "options": ["Yes, always", "Sometimes", "No, I suppress them", "Not sure"]
+    },
+    {
+        "id": 44,
+        "question": "How many hours of sleep do you usually get?",
+        "options": ["7+ hours", "5-6 hours", "Less than 5 hours", "It varies a lot"]
+    },
+    {
+        "id": 45,
+        "question": "Do you wake up feeling rested?",
+        "options": ["Yes, always", "Sometimes", "Rarely", "Never"]
+    },
+    {
+        "id": 46,
+        "question": "How often do you struggle with insomnia?",
+        "options": ["Never", "Sometimes", "Often", "Almost every night"]
+    },
+    {
+        "id": 47,
+        "question": "How satisfied are you with your mental health overall?",
+        "options": ["Very satisfied", "Somewhat satisfied", "Neutral", "Unsatisfied"]
+    },
+    {
+        "id": 48,
+        "question": "Do you feel your mental health has improved, worsened, or stayed the same over the past year?",
+        "options": ["Improved", "Stayed the same", "Worsened", "Not sure"]
+    },
+    {
+        "id": 49,
+        "question": "Do you feel hopeful about the future?",
+        "options": ["Yes, very hopeful", "Somewhat", "Uncertain", "Not really"]
+    },
+    {
+        "id": 50,
+        "question": "Would you be interested in mental health resources or professional help?",
+        "options": ["Yes", "Maybe", "No", "I'm unsure"]
+    }
+
+    ]

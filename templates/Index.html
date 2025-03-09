@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CelestHer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+
+    <script src="https://kit.fontawesome.com/434efcef7c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="{{ url_for('static', filename='celesther.png') }}" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="http://127.0.0.1:8000/survey">My profile</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-x" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+                
+
+                
+
+            </nav>
+            <div class="header-text">
+                <h1>CelestHer</h1>
+                <br>
+                <h3>The <span>SAFE</span> space for her to heal, glow 
+                    <br>and thrive</h3>
+                <br>
+                <a href="#get-started" class="cta-button">Get Started</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="about">
+        <h2>About Us</h2>
+        <br>
+        <p>
+            At CelestHer, our mission is to create a world where every woman feels seen, heard, and supported in her journey toward mental well-being. We believe that self-care is not a luxury but a necessity, and every woman deserves a safe space to reflect, heal, and grow. Our vision is to break the stigma around mental health, fostering a community built on resilience, self-empowerment, and emotional strength. We are committed to providing a nurturing environment where women can embrace their vulnerabilities, celebrate their growth, and find the support they need—because prioritizing your mental well-being should never feel like a struggle. CelestHer is more than just a platform; it’s a movement toward a future where women’s emotional health is recognized, valued, and uplifted.
+          </p>
+    </div> 
+
+
+    <div id="portfolio">
+        <div class="container">
+            <div id="black"> What CELESTHER offers?</div>
+            <div class="work-list">
+                <div class="work">
+                    <img src="{{ url_for('static', filename='stress.jpg') }}">
+                    <div class="layer">
+                        <h3>Emotional Wellness Tracker</h3>
+                        <p>Gain insights into your stress levels with a guided self-assessment and personalized recommendations.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="{{ url_for('static', filename='chatbot.png') }}">
+                    <div class="layer">
+                        <h3>AI Companion</h3>
+                        <p>Our AI-powered chatbot listens, supports, and offers personalized guidance whenever you need it.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+
+                <div class="work">
+                    <img src="{{ url_for('static', filename='growth.png') }}">
+                    <div class="layer">
+                        <h3>Gamify Your Growth</h3>
+                        <p>Set mental wellness goals, unlock achievements, and stay motivated through interactive progress tracking.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+    </div>
+
+  <div class="wrapper">
+        <div class="containery">
+            <input type="radio" name="slide" id="c1" checked>
+            <label for="c1" class="card">
+                
+            </label>
+
+            <input type="radio" name="slide" id="c2">
+            <label for="c2" class="card">
+                
+            </label>
+
+            <input type="radio" name="slide" id="c3">
+            <label for="c3" class="card">
+                
+            </label>
+
+            <input type="radio" name="slide" id="c4">
+            <label for="c4" class="card">
+                
+            </label>
+            <input type="radio" name="slide" id="c5">
+            <label for="c5" class="card">
+                
+            </label>
+        </div>
+    </div>      
+    </div>
+    <br>
+    <br>
+    <br>
+    
+  
+
+    
+
+    
+    <button class="chatbot-toggler">
+        <span class="material-symbols-outlined">mode_comment</span>
+        <span class="material-symbols-outlined close-icon">close</span>
+    </button>
+    
+    <div class="chatbot">
+        <header>
+            <h2>Chatbot</h2>
+        </header>
+        <ul class="chatbox">
+            <li class="chat incoming">
+                <span class="material-symbols-outlined">smart_toy</span>
+                <p>Hi there <br> How can I help you today?</p>
+            </li>
+            <li class="chat outgoing">
+                <p>I do not feel too good today.</p>
+            </li>
+        </ul>
+        <div class="chat-input">
+            <textarea placeholder="Enter a message..." required></textarea>
+            <span id="send-btn" class="material-symbols-outlined">send</span>
+        </div>
+    </div>
+    </body>
+    
+
+    
+
+
+    <footer>
+        <div class="containerff">
+            <div class="col-1">
+                <img src="/logo.png" alt="">
+                <p>made by team codecat-Hitanshi, Rakshit , Arjun and A
+                </p>
+            </div>
+            <div class="col-2">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Services</a></li>
+                </ul>
+            </div>
+            <div class="col-3">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#">HTML</a></li>
+                    <li><a href="#">CSS</a></li>
+                    <li><a href="#">JavaScript</a></li>
+                    <li><a href="#">React</a></li>
+                    <li><a href="#">Python</a></li>
+                    <li><a href="#">C++</a></li>
+                </ul>
+            </div>
+            <div class="col-4">
+                <h3>Newsletter</h3>
+                <form>
+                    <i class="far fa-envelope"></i>
+                    <input type="email" placeholder="Enter your email" required>
+                    <button><i class="fas fa-arrow-right"></i></button>
+                </form>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-2">
+            <p> <div class="copyright">
+                <p>&copy; 2025 CelestHer. All rights reserved.</p>
+            </div></p>
+        </div>
+    </footer>
+
+<script>
+    var sidemenu=document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right="0";
+    }
+    function closemenu(){
+        sidemenu.style.right="-200px";
+    }
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const chatbotToggler = document.querySelector(".chatbot-toggler");
+        const chatbot = document.querySelector(".chatbot");
+        const body = document.body;
+    
+        chatbotToggler.addEventListener("click", () => {
+            body.classList.toggle("show-chatbot");
+        });
+    });
+    
+</script>
+ 
+
+    
+</body>
+
+</html>
